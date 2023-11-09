@@ -60,10 +60,13 @@ li{
     width: 2em;
 }
 
-.header__navigation--right > li {
+.header__navigation--right  li {
     background-color:#444857;
-    padding: 11px;
+    padding: 11px 17px;
     border-radius: 0.25em;
+    display:grid;
+    grid-template-columns: auto 1fr;
+    align-items: center;
 }
 
 .header__navigation--username{
@@ -72,18 +75,36 @@ li{
     text-transform: lowercase;
 }
 
+.header__navigation--right-grid{
+    width: 20px;
+}
+
+.header__navigation--icon-group{
+    display: grid;
+}
+
+.header__navigation--right-pin{
+    width: 20px;
+}
+
+li.header__navigation--right-smiley{
+    background-image: url(./codepen-smiley.webp);
+    background-size: cover;
+    background-position: center;
+    padding: 0 20px;
+}
 
 
 .header__navigation--right-save::before{
-    background: url(./cloud.png) no-repeat;
+    background: url(./cloud-svgrepo-com.svg) no-repeat;
 }
 
 .header__navigation--right-settings::before{
-    background: url(./settings.jpg) no-repeat;
+    background: url(./settings-svgrepo-com\ \(1\).svg) no-repeat;
 }
 .header__navigation--right-save::before, .header__navigation--right-settings::before{
     content: '';
-    width: 2em;
+    width: 20px;
     background-size: contain;
     height: 1em;
     display: inline-block;
@@ -96,6 +117,17 @@ li{
 
 .header__navigation--title{
     font-size: 1.25em;
+}
+
+.header__navigation--title::after{
+    content: "";
+    display: inline-block;
+    width: 16px; 
+    height: 16px; 
+    background-image: url(./pencil-svgrepo-com.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin-left: 2px;
 }
 
 .main__content{
@@ -116,9 +148,7 @@ li{
     background-color: white;
 }
 
-.content__items{
-    /* border: 1px solid yellow */
-}
+
 
 .grid{
     display: grid;
@@ -152,7 +182,7 @@ li{
     align-items: center;
 }
 
-.main__content--title::before{
+.main__content--title::before, .editor__settings::before, .editor__arrowdown::before{
     content: "";
     display: inline-block;
     width: 16px; /* Adjust the width as needed */
@@ -169,6 +199,16 @@ li{
     background-image: url(./lemon-1-svgrepo-com.svg);
 }
 
+.editor__settings::before{
+    background-image: url(./settings-svgrepo-com\ \(1\).svg) ;
+}
+
+.editor__arrowdown::before{
+    background-image: url(./arrow-down-svgrepo-com.svg) ;
+}
+
+
+
 .editor__icons{
     display: flex;
     justify-content: center;
@@ -176,6 +216,19 @@ li{
     flex: 1;
     justify-content: flex-end;
     background-color: #060606;
+    padding-right: 5px;
+}
+
+.editor__icons > span {
+    background-color: #444857;
+    padding: 2px 8px;
+    border-radius: 2px;
+    display: grid;
+    align-content: center;
+}
+
+.editor__icons > span:first-child {
+    margin-right: 3px;
 }
 
 .main__wrapper{
