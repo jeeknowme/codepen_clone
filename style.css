@@ -1,0 +1,218 @@
+
+:root{
+    --main-content-resizer:minmax(0, 400px) 1fr; 
+}
+*, *::before, *::after{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    background-color: rgb(1,1,1);
+    font-family: 'Lato', sans-serif;
+}
+
+ul{
+     margin: 0;
+     padding: 0;
+}
+
+img{
+    max-width: 100%;;
+}
+
+.header__navigation{
+    color:white;
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style-type: none;
+}
+
+.header__navigation{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 0.1em solid #2F2F2F;
+    padding: 0.25em 0.5em;
+}
+
+.header__navigation--right{
+    display: flex;
+    gap: 10px;
+}
+
+.header__navigation--left{
+    display: flex;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.header__navigation--left p{
+    margin: 5px 0;
+}
+
+.header__navigation--brand-img{
+    width: 2em;
+}
+
+.header__navigation--right > li {
+    background-color:#444857;
+    padding: 11px;
+    border-radius: 0.25em;
+}
+
+.header__navigation--username{
+    font-size: 0.75em;
+    color: gray;
+    text-transform: lowercase;
+}
+
+
+
+.header__navigation--right-save::before{
+    background: url(./cloud.png) no-repeat;
+}
+
+.header__navigation--right-settings::before{
+    background: url(./settings.jpg) no-repeat;
+}
+.header__navigation--right-save::before, .header__navigation--right-settings::before{
+    content: '';
+    width: 2em;
+    background-size: contain;
+    height: 1em;
+    display: inline-block;
+}
+
+.header__navigation--right-pin{
+    width: 1em;
+
+}
+
+.header__navigation--title{
+    font-size: 1.25em;
+}
+
+.main__content{
+    display: grid;
+    grid-template-columns: var(--main-content-resizer);
+    grid-gap: 1em;
+}
+
+.main__content--editor{
+    color: gray;
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    border: 1px solid #2F2F2F;
+    border-top: 0;
+}
+
+.main__content--result{
+    background-color: white;
+}
+
+.content__items{
+    /* border: 1px solid yellow */
+}
+
+.grid{
+    display: grid;
+}
+.flex{
+    display: flex;
+}
+
+.justify-between{
+    justify-content: space-between;
+    
+}
+
+.editor{
+    resize:none;
+    background-color: #1D1E22;
+    border: none;
+}
+
+.main__editor--wrapper{
+    grid-template-rows: auto 1fr;
+    background-color: #1D1E22;
+}
+
+.main__content--title{
+    border-top: 2px solid #34363E;
+    font-weight: 900;
+    gap: 4px;
+    display: flex;
+    padding: 8px 13px;
+    align-items: center;
+}
+
+.main__content--title::before{
+    content: "";
+    display: inline-block;
+    width: 16px; /* Adjust the width as needed */
+    height: 16px; /* Adjust the height as needed */
+    background-image: url(./html-svgrepo-com.svg);
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.title__css::before{
+    background-image: url(./snow-flake-svgrepo-com.svg);
+}
+.title__js::before{
+    background-image: url(./lemon-1-svgrepo-com.svg);
+}
+
+.editor__icons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+    background-color: #060606;
+}
+
+.main__wrapper{
+    display: grid;
+    grid-template-rows: auto 1fr;
+    height: 100vh;
+}
+
+@media (max-width: 720px){
+    .main__content{
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr 1fr;
+    }
+    
+}
+
+@media (max-width: 770px){
+    .header__navigation--right-save, .header__navigation--right-settings{
+        display: none;
+    }
+}
+
+@media (max-width: 800px){
+    :root{
+        --main-content-resizer: 1fr 1fr;
+    }
+}
+
+@media(max-width: 830px){
+    .header__navigation--left p{
+        margin: 1px 0;
+    }
+    .header__navigation--right > li {
+        padding: 8px;
+    }
+}
+
+
+
+

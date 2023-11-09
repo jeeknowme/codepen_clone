@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Code Pen</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="main__wrapper">
+      <header>
+        <nav class="header__navigation">
+          <ul class="header__navigation--left">
+            <li>
+              <img
+                class="header__navigation--brand-img"
+                src="./codepen-white.png"
+                alt="codepen brand"
+              />
+            </li>
+            <li>
+              <p class="header__navigation--title">Untitled</p>
+              <p class="header__navigation--username">jinumi</p>
+            </li>
+          </ul>
+          <ul class="header__navigation--right">
+            <li class="header__navigation--right-save">Save</li>
+            <li class="header__navigation--right-settings">Settings</li>
+            <li>Icon</li>
+            <li>
+              <img
+                class="header__navigation--right-pin"
+                src="./pin.png"
+                alt="Pin"
+              />
+            </li>
+            <li>Icon</li>
+          </ul>
+        </nav>
+      </header>
+      <section class="grid">
+        <div class="main__content">
+          <div class="main__content--editor">
+            <div class="grid main__editor--wrapper">
+              <div
+                class="content__items main__content--html flex justify-between"
+              >
+                <span class="main__content--title">HTML</span>
+                <div class="editor__icons">
+                  <span>i</span>
+                  <span>I</span>
+                </div>
+              </div>
+              <textarea
+                class="editor"
+                name="html__editor"
+                id="html__editor"
+                cols="30"
+              ></textarea>
+            </div>
+            <div class="grid main__editor--wrapper">
+              <div
+                class="content__items main__content--html flex justify-between"
+              >
+                <span class="main__content--title title__css">CSS</span>
+                <div class="editor__icons">
+                  <span>i</span>
+                  <span>I</span>
+                </div>
+              </div>
+              <textarea
+                class="editor"
+                name="html__editor"
+                id="html__editor"
+                cols="30"
+              ></textarea>
+            </div>
+            <div class="grid main__editor--wrapper">
+              <div
+                class="content__items main__content--html flex justify-between"
+              >
+                <span class="main__content--title title__js">JS</span>
+                <div class="editor__icons">
+                  <span>i</span>
+                  <span>I</span>
+                </div>
+              </div>
+              <textarea
+                class="editor"
+                name="html__editor"
+                id="html__editor"
+                cols="30"
+              ></textarea>
+            </div>
+          </div>
+          <div class="main__content--result"></div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>
