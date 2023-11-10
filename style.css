@@ -266,6 +266,9 @@ li.header__navigation--right-smiley{
     }
 }
 
-
-
+textarea.editor{
+    color:white;
+    padding: 5px 15px;
+    outline: none;
+}
 
