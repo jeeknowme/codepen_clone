@@ -237,6 +237,12 @@ li.header__navigation--right-smiley{
     height: 100vh;
 }
 
+@media (max-width: 450px){
+    .header__navigation--title::after{
+        display: none;
+    }
+}
+
 @media (max-width: 720px){
     .main__content{
         grid-template-columns: 1fr;
