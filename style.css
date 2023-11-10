@@ -267,12 +267,8 @@ li.header__navigation--right-smiley{
 }
 
 
-
-
-.first__comit{
-
-}
-
-.second__commit{
-    
+textarea.editor{
+    color:white;
+    padding: 5px 15px;
+    outline: none;
 }
